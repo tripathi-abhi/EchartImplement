@@ -1,9 +1,14 @@
+/* Property reset */
+
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
-.div__chart {
+/* The chart wrapper div styles. Flex and center to center the charts. */
+
+.chart__wrapper {
 	width: 100%;
 	height: 600px;
 	margin: 40px 0;
@@ -13,10 +18,14 @@
 	align-items: center;
 }
 
-.chart__wrapper {
+/* Chart div styles */
+
+.div__chart {
 	width: 95%;
 	height: 100%;
 }
+
+/* Media querry for the width 100% when the width is less than 976px. */
 
 @media screen and (min-width: 976px) {
 	.container__graph {

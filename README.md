@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
-This project was made using Create React App with typescript template
-[Create React App](https://create-react-app.dev/docs/adding-typescript/).
+This project was made using Create React App with typescript template. \
+To learn more about it [Create React App](https://create-react-app.dev/docs/adding-typescript/).
 
 ## Available Scripts
 
@@ -49,5 +49,5 @@ customize it when you are ready for it.
 
 ## `Sample Deployed`
 
-The working sample of this very website is hosted on Netlify. Visit the website
-[here...](https://echart-sample.netlify.app/)
+The working sample of this very website is hosted on Netlify
+[Visit the website here.](https://echart-sample.netlify.app/)
