@@ -25,7 +25,7 @@
 	height: 100%;
 }
 
-/* Media querry for the width 100% when the width is less than 976px. */
+/* Media querry when the width is more than 976px. */
 
 @media screen and (min-width: 976px) {
 	.container__graph {

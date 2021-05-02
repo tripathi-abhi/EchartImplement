@@ -1,8 +1,86 @@
 // This file contains the options of the charts according to the apache echarts documentation.
 
+import { TooltipComponentOption, LegendComponentOption,GridComponentOption,ToolboxComponentOption  } from "echarts/components";
+import { XAXisComponentOption, YAXisComponentOption} from "echarts/";
 import { alcoholData, malicAcidData, scatterPlotData } from "../Utils/plotData";
 
-export const barGraphOptions = {
+// type toolboxTemplate = {
+// 		feature: {
+// 			dataZoom?: { yAxisIndex: boolean };
+// 			saveAsImage?: { pixelRatio: number };
+// 		};
+// }
+
+// type tooltipTemplate = {
+// 		trigger?:string;
+// 		axisPointer:{};
+// }
+
+// type gridTemplate = {
+// 	top?:number|string;
+// 	left?:number|string;
+// 	right?:number|string;
+// 	bottom?: number | string;
+// }
+
+// export type optionsTemplate = {
+// 	toolbox?: toolboxTemplate;
+// 	tooltip?: tooltipTemplate;
+// 	dataZoom?:{type:string;}[];
+// 	grid?: gridTemplate;
+// 	media?: mediaTemplate[];
+// 	xAxis: {
+// 		data?:(number)[];
+// 		silent?:boolean;
+// 		splitLine?:{
+// 			show:boolean,
+// 		};
+// 		splitArea?:{
+// 			show:boolean,
+// 		};
+// 	};
+// 	yAxis: {};
+// 	series?: seriesTemplate[];
+// 	legend?:{
+// 		data?:string[],
+// 		bottom?:string|number;
+// 	}
+// };
+
+type mediaTemplate = {
+			query?:{
+				aspectRatio?:string,
+				minWidth?:number,
+				maxWidth?: number,
+			},
+			option: {
+				title: {
+					text?: string,
+				},
+			}
+};
+
+type seriesTemplate = {
+			symbolSize?: number,
+			name?: string,
+			data: number[]|number[][],
+			type: string,
+			large?:boolean,
+}
+
+export type optionsTemplate = {
+	toolbox?: ToolboxComponentOption;
+	tooltip?: TooltipComponentOption;
+	dataZoom?: { type: string }[];
+	grid?: GridComponentOption;
+	media?: mediaTemplate[];
+	xAxis: XAXisComponentOption;
+	yAxis: YAXisComponentOption;
+	series?: seriesTemplate[];
+	legend?: LegendComponentOption;
+};
+
+export const barGraphOptions : optionsTemplate = {
 	// For the toolbox (Data zoom and picture save tools)  at the top right of the chart.
 	toolbox: {
 		feature: {
@@ -31,7 +109,7 @@ export const barGraphOptions = {
 		},
 		{
 			type: "slider",
-		},
+		}
 	],
 	// Similar to css media query. The very last media option doesn't need query as it is the base property i.e., when no other property is applicable.
 	media: [
@@ -80,7 +158,7 @@ export const barGraphOptions = {
 	],
 };
 
-export const scatterGraphOptions = {
+export const scatterGraphOptions : optionsTemplate = {
 	// This is same as for bar graph options.
 	toolbox: {
 		feature: {
